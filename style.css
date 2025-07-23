@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard JP", sans-serif;
+  background: linear-gradient(180deg, #fff 0%, #f7f7f7 100%);
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* 헤더 */
+header.hero {
+  position: fixed;
+  top: 0;
+  left: 40px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  transition: 0.3s ease;
+}
+header.hero.shrink {
+  height: 60px;
+  transform: scale(0.95);
+}
+header.hero .logo {
+  height: 80px;
+  cursor: pointer;
+}
+
+/* 메인 */
+.main-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 120px 20px 80px;
+}
+.main-text h1 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+}
+.main-text .subtitle {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* 콘텐츠 섹션 */
+.content-section {
+  min-height: 60vh;
+  text-align: center;
+  padding: 100px 20px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+.content-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.content-section p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* 주요 기능 카드 */
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.feature-cards .card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+.feature-cards .card:hover {
+  transform: translateY(-5px);
+}
+
+/* 후기 슬라이더 */
+.review-slider {
+  position: relative;
+  max-width: 600px;
+  margin: 30px auto 0;
+  text-align: center;
+  min-height: 60px;
+}
+.review-slider .review {
+  display: none;
+  font-size: 1.2rem;
+  color: #444;
+}
+.review-slider .review.active {
+  display: block;
+  animation: fadeIn 0.8s ease;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* CTA */
+.cta {
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+}
+.store-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+.store-btn img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+.store-btn img:hover {
+  transform: scale(1.05);
+}
+
+/* 맨위로 버튼 */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 12px;
+  background: #222;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  display: none;
+  cursor: pointer;
+}
+.scroll-top.show {
+  display: block;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px) {
+  .main-text h1 {
+    font-size: 2rem;
+  }
+  .main-text .subtitle {
+    font-size: 1rem;
+  }
+  .feature-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .store-buttons {
+    flex-direction: column;
+  }
+  .store-btn img {
+    height: 45px;
+  }
+}
