@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PETTO | 우리 동네 펫 플랫폼</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- GSAP 라이브러리 -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js" defer></script>
+
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- 상단바 -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <img src="assets/LOGO.PNG" alt="PETTO 로고" class="logo" />
+      <nav class="top-menu">
+        <a href="#">회사소개</a>
+        <a href="#">공지사항</a>
+        <a href="#">고객센터</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- 메인 -->
+  <section class="main-container fade-slide">
+    <div class="main-text">
+      <h1>반려동물과 당신을 위한 라이프</h1>
+      <p class="subtitle">
+        펫투는 반려동물과 당신의 일상을 만듭니다.<br />
+        간단하게, 아름답게, 그리고 직관적으로,<br />
+        당신이 사랑하는 반려동물과 함께하는 모든 순간을 위해 설계되었습니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- 섹션1 -->
+  <section id="section-intro" class="content-section fade-slide">
+    <h2>반려동물과 함께하는 스마트한 일상</h2>
+    <p>
+      반려동물을 키우는 것은 단순한 취미가 아닙니다. 건강 관리부터 일상 케어, 새로운 만남까지 챙겨야 할 것들이 많습니다.<br />
+      펫투는 보험, 병원, 미용, 소개팅까지 모든 서비스를 하나로 모았습니다.<br />
+      펫투 하나로 당신과 반려동물의 일상이 더 간단해집니다.
+    </p>
+  </section>
+
+  <!-- 섹션2 -->
+  <section id="section-features" class="content-section fade-slide">
+    <h2>펫투가 제공하는 서비스</h2>
+    <div class="feature-cards">
+      <div class="feature-cards-top">
+        <div class="card feature-btn" data-target="feature-detail-1">펫 미용</div>
+        <div class="card feature-btn" data-target="feature-detail-2">펫 병원</div>
+        <div class="card feature-btn" data-target="feature-detail-3">펫 보호소</div>
+      </div>
+      <div class="feature-cards-bottom">
+        <div class="card feature-btn" data-target="feature-detail-4">펫 보험</div>
+        <div class="card feature-btn" data-target="feature-detail-5">펫 소개팅</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 서비스 상세 -->
+  <section id="feature-detail-1" class="content-section fade-slide feature-detail">
+    <h2>내 주변 펫 미용실</h2>
+    <p>내 위치를 기반으로 가까운 펫 미용실을 쉽고 빠르게 찾아 예약할 수 있습니다. 전문 미용사와 다양한 스타일 옵션으로 반려동물의 외모를 최상으로 관리하세요.</p>
+  </section>
+
+  <section id="feature-detail-2" class="content-section fade-slide feature-detail">
+    <h2>24시간 병원 찾기</h2>
+    <p>응급 상황에도 안심할 수 있도록 24시간 운영하는 동물병원 정보를 실시간으로 제공합니다. 위치, 진료 과목, 이용 후기까지 한눈에 확인 가능합니다.</p>
+  </section>
+
+  <section id="feature-detail-3" class="content-section fade-slide feature-detail">
+    <h2>입양·후원 보호소</h2>
+    <p>입양 가능한 반려동물과 전국 보호소 정보를 확인하고, 직접 후원도 할 수 있습니다. 반려동물의 새로운 가족이 되어주는 기회를 제공합니다.</p>
+  </section>
+
+  <section id="feature-detail-4" class="content-section fade-slide feature-detail">
+    <h2>반려동물 맞춤 보험</h2>
+    <p>반려동물의 종과 건강 상태에 맞춘 다양한 보험 상품을 비교하고 간편하게 가입할 수 있습니다. 예상치 못한 의료비 부담을 줄여줍니다.</p>
+  </section>
+
+  <section id="feature-detail-5" class="content-section fade-slide feature-detail">
+    <h2>반려동물 친구 소개팅</h2>
+    <p>우리 강아지, 고양이에게도 친구가 필요합니다. 맞춤형 친구 매칭 서비스로 새로운 친구를 만나 반려동물의 사회성을 키워주세요.</p>
+  </section>
+
+  <!-- CTA -->
+  <section id="section-cta" class="content-section cta fade-slide">
+    <h2>지금 바로 펫투 앱을 설치해보세요.</h2>
+    <div class="store-buttons">
+      <a href="#" class="store-btn"><img src="assets/appstore.svg" alt="앱스토어" /></a>
+      <a href="#" class="store-btn"><img src="assets/googleplay.svg" alt="구글플레이" /></a>
+    </div>
+  </section>
+
+  <button class="scroll-top" aria-label="맨 위로 이동">▲</button>
+</body>
+</html>
